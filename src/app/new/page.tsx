@@ -1,7 +1,16 @@
-import React from 'react'
+"use client";
+import { withPageAuthRequired } from "@auth0/nextjs-auth0/client";
+import Link from "next/link";
 
-export default function New() {
+export default withPageAuthRequired(function Page() {
   return (
-    <div>New</div>
-  )
-}
+    <main>
+      <h1>Hello World</h1>
+      <p>This is the New</p>
+      <div>New</div>
+      <div>
+        <Link href={"/"}>Go to home</Link>
+      </div>
+    </main>
+  );
+});
