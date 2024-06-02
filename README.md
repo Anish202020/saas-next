@@ -9,17 +9,7 @@ A few extra NMP packages are included to make development easier:
 - react-toastify
 - react-time-ago
 
-Created by [Clipper](github.com/clipper-dev)
 
-## Getting Started
-
-Create a new project using the following command:
-
-```bash
-npx create-next-app@latest my-app -e https://github.com/clipper-dev/nextjs-mongo-starter
-```
-
-This will create a new project named **my-app** in its own directory that will be stilised as this template repo.
 
 First, run the development server:
 
