@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useUser } from "@auth0/nextjs-auth0/client";
+// import Video from 'next-video';
 export default function Home() {
   const { user, error, isLoading } = useUser();
   return (
@@ -31,6 +32,7 @@ export default function Home() {
             Welcome to Bloggify, where you can easily create full blog posts
             with just one click!
           </h2>
+          <iframe className="rounded-lg" width="560" height="315" src="https://www.youtube.com/embed/3Lk3NBXSrHA?si=ijexu93638VUfXsP" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           <a
             href="/api/auth/login"
             className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-500 transition-all

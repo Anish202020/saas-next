@@ -1,7 +1,7 @@
 import Navbar from "@/components/nav/Navbar";
 import "./globals.css";
 export const metadata = {
-  title: "Blog Saas",
+  title: "AI-Bloggy",
   description:
     "NextJS template with TypeScript, TailwindCSS, and MongoDB, created by @clipper.",
 };
