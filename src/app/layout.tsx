@@ -20,7 +20,7 @@ export default function RootLayout({
           <Navbar />
           <main className="w-full h-full flex flex-col md:flex-row">
             <Sidebar />
-            {children}
+            <div className="w-full overflow-auto md:pr-32">{children}</div>
           </main>
         </body>
       </UserProvider>
