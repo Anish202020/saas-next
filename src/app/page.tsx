@@ -7,7 +7,13 @@ export default function Home() {
     <main>
       <h2>Hello</h2>
       <p>The user {user?.name}</p>
-      <Link href={"/api/auth/login"}>Login</Link>
+      {user && <p>The user {user?.name} is logged in.</p>}
+
+      {user ? 
+        (<Link href={"/api/auth/logout"}>Logout</Link>)
+        :
+        (<Link href={"/api/auth/login"}>Login</Link>)}
+      
     </main>
   )
 }
