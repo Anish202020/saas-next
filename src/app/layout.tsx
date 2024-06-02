@@ -16,10 +16,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <UserProvider>
-        <body className="bg-gray-50">
-          <Navbar/>
-          <Sidebar/>
-          {children}</body>
+        <body className="w-full h-screen flex flex-col bg-gray-50">
+          <Navbar />
+          <main className="w-full h-full flex flex-col md:flex-row">
+            <Sidebar />
+            {children}
+          </main>
+        </body>
       </UserProvider>
     </html>
   );
