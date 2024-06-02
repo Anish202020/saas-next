@@ -1,3 +1,4 @@
+import Navbar from "@/components/nav/Navbar";
 import "./globals.css";
 export const metadata = {
   title: "Blog Saas",
@@ -14,7 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <UserProvider>
-        <body>{children}</body>
+        <body className="bg-gray-50">
+          <Navbar/>
+          {children}</body>
       </UserProvider>
     </html>
   );
