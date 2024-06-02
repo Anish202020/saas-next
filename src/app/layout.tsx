@@ -1,17 +1,21 @@
-import './globals.css'
+import "./globals.css";
 export const metadata = {
-  title: 'NextJS template with TypeScript, TailwindCSS, and MongoDB',
-  description: 'NextJS template with TypeScript, TailwindCSS, and MongoDB, created by @clipper.',
-}
+  title: "Blog Saas",
+  description:
+    "NextJS template with TypeScript, TailwindCSS, and MongoDB, created by @clipper.",
+};
+import { UserProvider } from "@auth0/nextjs-auth0/client";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <UserProvider>
+        <body>{children}</body>
+      </UserProvider>
     </html>
-  )
+  );
 }
