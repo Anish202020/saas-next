@@ -6,6 +6,7 @@ export const metadata = {
     "NextJS template with TypeScript, TailwindCSS, and MongoDB, created by @clipper.",
 };
 import { UserProvider } from "@auth0/nextjs-auth0/client";
+import Sidebar from "@/components/nav/Sidebar";
 
 export default function RootLayout({
   children,
@@ -17,6 +18,7 @@ export default function RootLayout({
       <UserProvider>
         <body className="bg-gray-50">
           <Navbar/>
+          <Sidebar/>
           {children}</body>
       </UserProvider>
     </html>
