@@ -32,7 +32,7 @@ export default function Navbar() {
         className="flex flex-row justify-center font-medium text-xl items-center gap-1"
       >
         <BiPen className="mt-0.5" />
-        AI Bloggy
+        AI-Bloggy
       </Link>
 
       {user ? (

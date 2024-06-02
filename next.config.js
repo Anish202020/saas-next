@@ -1,15 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    
-    images: {
-        remotePatterns: [
-          {
-            protocol: 'https',
-            hostname: 's.gravatar.com',
-            pathname: '**',
-          },
-        ],
-      },
-};
+  images: {
+      domains: ["s.gravatar.com"],
+  }
+}
 
 module.exports = nextConfig
