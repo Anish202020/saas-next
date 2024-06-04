@@ -27,7 +27,7 @@ export default withPageAuthRequired(function Page() {
             width={80}
             height={80}
           />
-          <h1 className="hidden text-lg md:block font-semibold text-gray-600">Hi, {user?.name}</h1>
+          <h1 className="hidden text-lg md:block font-semibold text-gray-600">Hi, {user?.name || "dear user"}</h1>
 
           
 

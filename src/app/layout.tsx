@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <UserProvider>
       <head>
-          <title>AI-Bloggy</title>
+          <title>Login | AI-Bloggy</title>
         </head>
         <RecoilRoot>
         <body className="w-full h-screen flex flex-col bg-gray-50">

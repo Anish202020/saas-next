@@ -12,10 +12,10 @@ export default function Home() {
       {user ? (
         <div className="flex flex-col items-center justify-center gap-4">
           <h1 className="mt-4 text-4xl font-bold text-center text-indigo-600">
-            Hi, {user?.nickname || user?.name || "dear user"}!
+            Hi, {user?.name || user?.nickname ||  "dear user"}!
           </h1>
           <h2 className="text-xl max-w-lg text-center text-gray-600">
-            Welcome to Bloggify, where you can easily create full blog posts
+            Welcome to AI-Bloggy, where you can easily create full blog posts
             with just one click!
           </h2>
           <Link
