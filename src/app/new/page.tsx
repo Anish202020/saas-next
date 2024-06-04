@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { tones } from "@/data/tones";
 export default withPageAuthRequired(function Page() {
-  // const [post, setPost] = useState<Post | null>(null);
+  const [post, setPost] = useState<Post | null>(null);
   const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [error, setError] = useState(false);
@@ -19,6 +19,7 @@ export default withPageAuthRequired(function Page() {
   
   function handleSubmit(e: React.FormEvent<HTMLFormElement>){
     e.preventDefault();
+    
   }
   return (
     <section className="w-full flex flex-col items-center">
