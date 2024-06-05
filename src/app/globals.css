@@ -1,4 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.picture{
+    background-image: url("https://paintingvalley.com/drawings/artificial-intelligence-drawing-26.png");
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: contain;
 
+    
+}

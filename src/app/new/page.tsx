@@ -27,7 +27,7 @@ export default withPageAuthRequired(function Page() {
         <form 
         onSubmit={handleSubmit}
         className="w-full flex flex-col gap-4 mt-4 items-center">
-          <h1 className="text-4xl font-bold text-center text-indigo-600">
+          <h1 className="text-4xl font-bold text-center text-blue-600">
             Generate a new post
           </h1>
 
@@ -39,7 +39,7 @@ export default withPageAuthRequired(function Page() {
               Title (optional)
             </label>
             <input
-              className="w-full border border-gray-200 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+              className="w-full border border-gray-200 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
               type="text"
               name="title"
               id="title"
@@ -66,7 +66,7 @@ export default withPageAuthRequired(function Page() {
               onChange={(e) =>
                 setPostPrompt({ ...postPrompt, description: e.target.value })
               }
-              className="w-full border border-gray-200 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+              className="w-full border border-gray-200 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
             />
           </div>
 
@@ -86,7 +86,7 @@ export default withPageAuthRequired(function Page() {
               onChange={(e) =>
                 setPostPrompt({ ...postPrompt, keywords: e.target.value })
               }
-              className="w-full border border-gray-200 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+              className="w-full border border-gray-200 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
             />
           </div>
 
@@ -104,7 +104,7 @@ export default withPageAuthRequired(function Page() {
               onChange={(e) =>
                 setPostPrompt({ ...postPrompt, tone: e.target.value })
               }
-              className="w-full border border-gray-200 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+              className="w-full border border-gray-200 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
             >
               {tones.map((tone, index) => (
                 <option key={index} value={tone.value}> 
@@ -118,7 +118,7 @@ export default withPageAuthRequired(function Page() {
 
           <button
             type="submit"
-            className="bg-indigo-600 w-fit text-white px-4 py-2 rounded-md mt-4 hover:bg-indigo-500 transition-all
+            className="bg-blue-600 w-fit text-white px-4 py-2 rounded-md mt-4 hover:bg-blue-500 transition-all
                 cursor-pointer"
           >
             Submit

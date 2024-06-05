@@ -9,18 +9,19 @@ import { useRecoilCallback, useRecoilValue } from "recoil";
 
 export default function Navbar() {
   const { user } = useUser();
-  const profile = useRecoilValue(profileAtom)
+  const profile = useRecoilValue(profileAtom);
   return (
     <nav className="w-full bg-white shadow-md px-6 py-2 z-20 grid grid-cols-3">
       {user ? (
         <div className="flex justify-start">
           <div className="flex flex-col md:flex-row justify-start items-center md:gap-4">
             <div className="flex items-center gap-1">
-              <BiCoin /> <span className="hidden md:block">Credits:</span> {profile.credits}
+              <BiCoin /> <span className="hidden md:block">Credits:</span>{" "}
+              {profile.credits}
             </div>
             <Link
               href="/profile"
-              className="text-xs md:text-xl font-bold text-gray-600 hover:text-indigo-600"
+              className="text-xs md:text-xl font-bold text-gray-600 hover:text-blue-600"
             >
               BUY MORE
             </Link>
@@ -34,8 +35,14 @@ export default function Navbar() {
         href={"/"}
         className="flex flex-row justify-center font-medium text-xl items-center gap-1"
       >
-        <BiPen className="mt-0.5" />
-        AI-Bloggy
+        {user ? (
+          <div>Welcome</div>
+        ) : (
+          <div>
+            
+            AI-Bloggy
+          </div>
+        )}
       </Link>
 
       {user ? (
@@ -48,10 +55,12 @@ export default function Navbar() {
             height={24}
           />
           <span className="font-semibold text-gray-600 md:hidden">Hi!</span>
-          <span className="hidden md:block font-semibold text-gray-600">Hi, {user?.name}!</span>
+          <span className="hidden md:block font-semibold text-gray-600">
+            Hi, {user?.name}!
+          </span>
           <a
             href="/api/auth/logout"
-            className="font-semibold text-gray-600 text-xl cursor-pointer hover:text-indigo-600"
+            className="font-semibold text-gray-600 text-xl cursor-pointer hover:text-blue-600"
           >
             <BiLogOut />
           </a>

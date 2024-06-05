@@ -10,28 +10,28 @@ export default function Home() {
   return (
     <section className="w-full flex flex-col">
       {user ? (
-        <div className="flex flex-col items-center justify-center gap-4">
-          <h1 className="mt-4 text-4xl font-bold text-center text-indigo-600">
-            Hi, {user?.name || user?.nickname ||  "dear user"}!
+        <div className="flex flex-col items-center picture justify-center gap-4">
+          <h1 className="mt-4 text-4xl font-bold text-center text-blue-600">
+          Hi, {user?.name || user?.nickname ||  "dear user"}!
           </h1>
           <h2 className="text-xl max-w-lg text-center text-gray-600">
-            Welcome to AI-Bloggy, where you can easily create full blog posts
+          Welcome to AI-Bloggy, where you can easily create full blog posts
             with just one click!
           </h2>
           <Link
             href="/new"
-            className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-500 transition-all
+            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500 transition-all
               cursor-pointer"
           >
             Get Started
           </Link>
         </div>
       ) : (
-        <div className="flex flex-col items-center justify-center gap-4">
+        <div className="flex flex-col items-center picture  justify-center gap-4">
           
           <Link 
             href={"/"}
-            className="flex mt-3 text-2xl font-bold text-center text-indigo-600 flex-row justify-center  items-center gap-1"
+            className="flex mt-3 text-2xl font-bold text-center text-blue-600 flex-row justify-center  items-center gap-1"
           >
             {/* <IoMdCreate className="mt-0.5" /> */}
             
@@ -48,7 +48,7 @@ export default function Home() {
           />
 
           <h2 className="text-xl max-w-lg text-center text-gray-600">
-            Discover our upcoming AI-generated blog filled with inspiring
+          Discover our upcoming AI-generated blog filled with inspiring
             content.
           </h2>
           <iframe
@@ -64,7 +64,7 @@ export default function Home() {
           ></iframe>
           <a
             href="/api/auth/login"
-            className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-500 transition-all
+            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500 transition-all
                   cursor-pointer"
           >
             Login to get started

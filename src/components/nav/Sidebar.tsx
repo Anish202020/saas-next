@@ -28,23 +28,23 @@ export default function Sidebar() {
     and the other one
     "
     >
-      {menu.map((item,index)=>(
+      {menu.map((item, index) => (
         <Link
           href={item.route}
           key={index}
-          className="flex flex-row items-center relative hover:bg-indigo-50 px-4 py-2 cursor-pointer group rounded-lg"
+          className="flex flex-row items-center relative hover:bg-blue-50 px-4 py-2 cursor-pointer group rounded-lg"
         >
           <div className="flex flex-row items-center">
             {currentRoute === item.route && (
-              <div className="absolute hidden md:block h-full w-2 bg-indigo-600 rounded-full -left-1"></div>
+              <div className="absolute hidden md:block h-full w-2 bg-blue-600 rounded-full -left-1"></div>
             )}
             {currentRoute === item.route && (
-              <div className="absolute block md:hidden h-2 w-full bg-indigo-600 rounded-full -top-3 left-0"></div>
+              <div className="absolute block md:hidden h-2 w-full bg-blue-600 rounded-full -top-3 left-0"></div>
             )}
-            <span className="text-gray-500 text-xl group-hover:text-indigo-600">
+            <span className="text-gray-500 text-xl group-hover:text-blue-600">
               {getIcon(item.icon)}
             </span>
-            <span className="ml-2 text-gray-500 group-hover:text-indigo-600">
+            <span className="ml-2 text-gray-500 group-hover:text-blue-600">
               {item.text}
             </span>
           </div>

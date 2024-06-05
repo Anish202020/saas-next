@@ -9,7 +9,7 @@ export default withPageAuthRequired(function Page() {
   return (
     <section className="w-full flex flex-col items-center">
       <section className="w-[95%] max-w-4xl flex flex-col items-center">
-        <h1 className="text-4xl font-bold mt-4 text-indigo-600">Your posts</h1>
+        <h1 className="text-4xl font-bold mt-4 text-blue-600">Your posts</h1>
         <div className="w-full flex flex-col gap-8 mt-4 items-center">
         {loadingPosts && (
             <>
