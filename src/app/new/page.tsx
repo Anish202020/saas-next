@@ -9,28 +9,33 @@ export default withPageAuthRequired(function Page() {
   const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);  
+  const [success, setSuccess] = useState(false);
   // const [refetchCredits, setRefetchCredits] = useRecoilState(refetchCreditsAtom);
   const [postPrompt, setPostPrompt] = useState<PostPrompt>({
     title: "",
     description: "",
     keywords: "",
     tone: "",
-  });  
-  
-  async function  handleSubmit(e: React.FormEvent<HTMLFormElement>){
+  });
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const res = await generatePost(postPrompt)
-    await res.json().then((data)=>{
-      setPost(data.post);
-    })
+    const res = await  generatePost(postPrompt);
+    console.log(res)
+    await res
+      .json()
+      .then((data) => {
+        console.log(data)
+        setPost(data.post);
+      })
   }
   return (
     <section className="w-full picture flex flex-col items-center">
       <section className="w-[95%] max-w-4xl">
-        <form 
-        onSubmit={handleSubmit}
-        className="w-full flex flex-col gap-4 mt-4 items-center">
+        <form
+          onSubmit={handleSubmit}
+          className="w-full flex flex-col gap-4 mt-4 items-center"
+        >
           <h1 className="text-4xl font-bold text-center text-blue-600">
             Generate a new post
           </h1>
@@ -111,14 +116,12 @@ export default withPageAuthRequired(function Page() {
               className="w-full border border-gray-200 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
             >
               {tones.map((tone, index) => (
-                <option key={index} value={tone.value}> 
-                  {tone.label} 
-                 </option> 
-               ))} 
+                <option key={index} value={tone.value}>
+                  {tone.label}
+                </option>
+              ))}
             </select>
           </div>
-
-
 
           <button
             type="submit"
