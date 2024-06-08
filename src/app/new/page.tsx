@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { tones } from "@/data/tones";
 import { generatePost } from "@/lib/functions";
+import {FaSpinner,FaRegTired} from "react-icons/fa"
 export default withPageAuthRequired(function Page() {
   const [post, setPost] = useState<Post | null>(null);
   const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
@@ -20,14 +21,27 @@ export default withPageAuthRequired(function Page() {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const res = await  generatePost(postPrompt);
-    console.log(res)
+    //reset all the flags
+    setHasSubmitted(true);
+    setError(false);
+    setSuccess(false);
+    setIsWaitingForResponse(true);
+    //send the request
+    const res = await generatePost(postPrompt);    
+    // setRefetchCredits((prev) => !prev);
     await res
       .json()
       .then((data) => {
-        console.log(data)
+        setIsWaitingForResponse(false);
+        setHasSubmitted(false);
+        setSuccess(true);
         setPost(data.post);
       })
+      .catch((err) => {
+        setIsWaitingForResponse(false);
+        setHasSubmitted(false);
+        setError(true);
+      });
   }
   return (
     <section className="w-full picture flex flex-col items-center">
@@ -131,6 +145,37 @@ export default withPageAuthRequired(function Page() {
             Submit
           </button>
         </form>
+        {isWaitingForResponse && hasSubmitted && (
+          <div className="w-full flex flex-col gap-4 mt-4 items-center">
+            <FaSpinner className="animate-spin w-8 h-8 text-indigo-600" />
+          </div>
+        )}
+        {error && (
+          <div className="w-full flex flex-col gap-4 mt-4 items-center">
+            <FaRegTired className="w-8 h-8 text-rose-600" />
+            <p className="text-rose-600 text-center">
+              Something went wrong. Please try again.
+            </p>
+          </div>
+        )}
+        {success && post && (
+          <div className="w-full flex flex-col gap-4 mt-4">
+            <h1 className="text-4xl font-bold text-gray-800 text-center">
+              {post.title}
+            </h1>
+            {typeof post.content === "string" ? (
+              <p className="text-gray-600">{post.content}</p>
+            ) : (
+              <div className="flex flex-col gap-2">
+                {post.content.map((paragraph, index) => (
+                  <p key={index} className="text-gray-600">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
       </section>
     </section>
   );

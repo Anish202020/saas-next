@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-
+import { connectToDatabase } from "@/lib/mongo";
 import { getSession, withApiAuthRequired } from "@auth0/nextjs-auth0";
 import OpenAI from "openai";
 
@@ -7,8 +7,9 @@ const withApiAuthRequiredExtended = withApiAuthRequired as any;
 
 export const POST = withApiAuthRequiredExtended(
   async (request: NextRequest, response: NextResponse) => {
-    // const { db } = await connectToDatabase();
+    const { db } = await connectToDatabase();
     try {
+
       const session = await getSession(request, response);
       const user = session?.user;
       if (!user) {
@@ -84,6 +85,7 @@ export const POST = withApiAuthRequiredExtended(
         content: _paragraphs || ["No content generated"],
         uid: user.sub,
       };
+      await db.collection("posts").insertOne(post);
 
       
 
