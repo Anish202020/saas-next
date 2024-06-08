@@ -15,7 +15,7 @@ export default withPageAuthRequired(function Page() {
   }
   
   return (
-    <section className="w-full flex flex-col items-center">
+    <section className="w-full picture flex flex-col items-center">
     <section className="w-[95%] max-w-4xl flex flex-col items-center gap-4">
       <h1 className="text-4xl font-bold text-center mt-4 text-blue-600">
         Your Profile
@@ -41,6 +41,12 @@ export default withPageAuthRequired(function Page() {
         Buy more credits
       </button>
 
+      <a
+            href="/contribution"
+            className="font-semibold text-gray-600 text-xl cursor-pointer hover:text-blue-600"
+          >
+            Contribution
+          </a>
       <a
             href="/api/auth/logout"
             className="font-semibold text-gray-600 text-xl cursor-pointer hover:text-blue-600"
