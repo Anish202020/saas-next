@@ -5,8 +5,8 @@ import { withPageAuthRequired } from "@auth0/nextjs-auth0/client";
 
 export default withPageAuthRequired( function Page() {
   return (
-    <section className="w-full h-14 picture flex  flex-col items-center">
-      <div className="container px-5 py-4 mx-auto">
+    <section className="w-full  flex  flex-col items-center">
+      <div className="w-[95%] max-w-4xl  px-5 py-4">
         <div className="flex flex-col text-center w-full mb-20">
           <h1 className="text-4xl font-bold text-center text-blue-600">
             Our Team
@@ -18,13 +18,13 @@ export default withPageAuthRequired( function Page() {
         </div>
       </div>
       <div>
-        <div className="flex gap-6 h-full flex-wrap lg:flex-row flex-col">
-          <div>
+        <div className="flex gap-6 flex-wrap items-center flex-row">
+          <div className="text-center">
             <Image
-              width={50}
-              height={50}
+              width={100}
+              height={100}
               alt="team"
-              className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+              className="flex-shrink-0 rounded-lg object-cover object-center mb-4"
               src="https://i.ibb.co/xFKSFr4/anish.jpg"
             />
             <div>
@@ -41,10 +41,10 @@ export default withPageAuthRequired( function Page() {
           </div>
           <div>
             <Image
-              width={50}
-              height={50}
+              width={100}
+              height={100}
               alt="team"
-              className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+              className="flex-shrink-0 rounded-lg object-cover object-center mb-4"
               src="https://i.ibb.co/xFKSFr4/anish.jpg"
             />
             <div>
@@ -61,10 +61,10 @@ export default withPageAuthRequired( function Page() {
           </div>
           <div>
             <Image
-              width={50}
-              height={50}
+              width={100}
+              height={100}
               alt="team"
-              className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+              className="flex-shrink-0 rounded-lg object-cover object-center mb-4"
               src="https://i.ibb.co/xFKSFr4/anish.jpg"
             />
             <div>

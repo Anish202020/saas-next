@@ -3,6 +3,7 @@ import { withPageAuthRequired } from "@auth0/nextjs-auth0/client";
 import Link from "next/link";
 import { useState } from "react";
 import { tones } from "@/data/tones";
+import { generatePost } from "@/lib/functions";
 export default withPageAuthRequired(function Page() {
   const [post, setPost] = useState<Post | null>(null);
   const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
@@ -17,9 +18,12 @@ export default withPageAuthRequired(function Page() {
     tone: "",
   });  
   
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>){
+  async function  handleSubmit(e: React.FormEvent<HTMLFormElement>){
     e.preventDefault();
-    
+    const res = await generatePost(postPrompt)
+    await res.json().then((data)=>{
+      setPost(data.post);
+    })
   }
   return (
     <section className="w-full picture flex flex-col items-center">
