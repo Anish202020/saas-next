@@ -3,7 +3,7 @@ import PostSkeleton from "@/components/skeletons/PostSkeleton";
 import { withPageAuthRequired } from "@auth0/nextjs-auth0/client";
 import Link from "next/link";
 import { useState,useEffect } from "react";
-import {getPosts} from "@/lib/functions"
+import {deletePost, getPosts} from "@/lib/functions"
 import Post from "@/components/items/Post";
 
 export default withPageAuthRequired(function Page() {
@@ -23,7 +23,7 @@ export default withPageAuthRequired(function Page() {
   
   function handleDeletePost(_id: string) {
     async function handler() {
-      // await deletePost(_id);
+      await deletePost(_id);
     }
     setFetchedPosts((prev) => prev.filter((post) => post._id !== _id));
     handler();

@@ -32,14 +32,14 @@ export default function Post({post,handleDeletePost}:Props) {
                 cursor-pointer"
         onClick={handleCopyToClipboard}
       >
-        Copy
+        Copy the Post
       </button>
       <button
         className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-500 transition-all
                 cursor-pointer"
         onClick={handleDelete}
       >
-        Delete
+        Delete the Post
       </button>
     </div>
   )
