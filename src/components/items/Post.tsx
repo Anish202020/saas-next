@@ -1,5 +1,9 @@
 "use client"
 import React from 'react'
+import { FaCopy } from "react-icons/fa";
+import { TiDocumentDelete } from "react-icons/ti";
+import { MdDeleteForever } from "react-icons/md";
+
 interface Props {
   post: PostWithId;
   handleDeletePost: (_id: string) => void;
@@ -28,18 +32,18 @@ export default function Post({post,handleDeletePost}:Props) {
         </div>
       )}
       <button
-        className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500 transition-all
+        className="bg-blue-600 flex gap-2 justify-center text-white px-4 py-2 rounded-md hover:bg-blue-500 transition-all
                 cursor-pointer"
         onClick={handleCopyToClipboard}
       >
-        Copy the Post
+        <FaCopy className='mt-1'/>Copy the Post
       </button>
       <button
-        className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-500 transition-all
+        className="bg-red-600 flex gap-1 justify-center text-white px-4 py-2 rounded-md hover:bg-red-500 transition-all
                 cursor-pointer"
         onClick={handleDelete}
       >
-        Delete the Post
+        <MdDeleteForever className='text-xl mt-0.5'/>Delete the Post
       </button>
     </div>
   )

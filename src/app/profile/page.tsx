@@ -6,6 +6,7 @@ import { useRecoilState } from "recoil";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import Image from "next/image";
 import { BiLogOut } from "react-icons/bi";
+import { MdOutlineCreditScore } from "react-icons/md";
 
 export default withPageAuthRequired(function Page() {
   const [profile ,setProfile] = useRecoilState(profileAtom)
@@ -35,10 +36,10 @@ export default withPageAuthRequired(function Page() {
         You have {profile.credits} credits.
       </h2>
       <button
-        className="bg-blue-600 text-white px-4 py-2 rounded-md font-bold text-xl"
+        className="bg-blue-600 flex gap-1 justify-center text-white px-4 py-2 rounded-md font-bold text-xl"
         onClick={handleAddCredits}
       >
-        Buy more credits
+        <MdOutlineCreditScore className="mt-1.5"/> Buy more credits
       </button>
 
       <a

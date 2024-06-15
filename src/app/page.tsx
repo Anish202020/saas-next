@@ -2,9 +2,8 @@
 import Link from "next/link";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import Image from "next/image";
-import { BiPen } from "react-icons/bi";
-import { IoMdCreate } from "react-icons/io";
-// import Video from 'next-video';
+import { FaPenFancy } from "react-icons/fa";
+
 export default function Home() {
   const { user, error, isLoading } = useUser();
   return (
@@ -32,11 +31,9 @@ export default function Home() {
           <Link 
             href={"/"}
             className="flex mt-3 text-2xl font-bold text-center text-blue-600 flex-row justify-center  items-center gap-1"
-          >
-            {/* <IoMdCreate className="mt-0.5" /> */}
-            
+          > 
             Where Technology meets Creator
-            <IoMdCreate className="mt-0.5" />
+            <FaPenFancy className="text-xl mt-0.5" />
           </Link>
 
           <Image
