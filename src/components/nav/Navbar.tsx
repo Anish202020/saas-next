@@ -18,10 +18,10 @@ export default function Navbar() {
     async function fetchProfile() {
       const profile = await getProfile();
       console.log(profile);
-      setProfile(profile)
-    }      
-    if(user) fetchProfile();
-  },[setProfile, user, refetchCredits]);
+      setProfile(profile);
+    }
+    if (user) fetchProfile();
+  }, [setProfile, user, refetchCredits]);
   return (
     <nav className="w-full bg-white shadow-md px-6 py-2 z-20 grid grid-cols-3">
       {user ? (
@@ -47,14 +47,7 @@ export default function Navbar() {
         href={"/"}
         className="flex flex-row justify-center font-medium text-xl items-center gap-1"
       >
-        {user ? (
-          <div>Welcome</div>
-        ) : (
-          <div>
-            
-            AI-Bloggy
-          </div>
-        )}
+        {user ? <div>Welcome</div> : <div>AI-Bloggy</div>}
       </Link>
 
       {user ? (
