@@ -1,18 +1,22 @@
 "use client";
 import { profileAtom } from "@/atoms/profileAtom";
 import { withPageAuthRequired } from "@auth0/nextjs-auth0/client";
-import Link from "next/link";
 import { useRecoilState } from "recoil";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import Image from "next/image";
-import { BiLogOut } from "react-icons/bi";
 import { MdOutlineCreditScore } from "react-icons/md";
-
+import { addCredits } from "@/lib/functions";
+import { refetchCreditsAtom } from "@/atoms/flagAtom";
 export default withPageAuthRequired(function Page() {
   const [profile ,setProfile] = useRecoilState(profileAtom)
   const { user } = useUser();
-  function handleAddCredits(){
-    setProfile((profile)=>({...profile,credits : profile.credits +5}))
+  const [refetchCredits, setRefetchCredits] = useRecoilState(refetchCreditsAtom);
+  function handleAddCredits() {
+    async function handler() {
+      await addCredits();
+      setRefetchCredits((prev) => !prev);
+    }
+    handler();
   }
   
   return (
