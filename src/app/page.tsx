@@ -52,9 +52,9 @@ export default function Home() {
             content.
           </h2>
           <iframe
-            className="rounded-lg"
-            width="560"
-            height="315"
+            className="rounded-lg h-80 lg:w-2/6 md:w-3/6  w-3/6 mb-10 object-cover object-center "
+            // width={500}
+            // height={350}
             src="https://www.youtube.com/embed/3Lk3NBXSrHA?si=ijexu93638VUfXsP"
             title="YouTube video player"
             frameBorder="0"

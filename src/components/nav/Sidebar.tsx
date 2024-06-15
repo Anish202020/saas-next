@@ -44,7 +44,7 @@ export default function Sidebar() {
             <span className="text-gray-500 text-xl group-hover:text-blue-600">
               {getIcon(item.icon)}
             </span>
-            <span className="ml-2 text-gray-500 group-hover:text-blue-600">
+            <span className="ml-2 text-gray-500 hidden sm:block group-hover:text-blue-600">
               {item.text}
             </span>
           </div>

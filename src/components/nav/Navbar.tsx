@@ -48,7 +48,7 @@ export default function Navbar() {
       {user ? (
         <div className="flex flex-row justify-end items-center gap-2">
           <Image
-            className="rounded-full"
+            className="rounded-full hidden sm:block"
             src={user?.picture || ""}
             alt={user?.name || ""}
             width={24}
