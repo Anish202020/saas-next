@@ -3,13 +3,25 @@ import { profileAtom } from "@/atoms/profileAtom";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+// import  {useEffect} from "react";
 import { BiCoin, BiLogOut, BiPen } from "react-icons/bi";
-import { useRecoilCallback, useRecoilValue } from "recoil";
+import { useRecoilCallback, useRecoilState, useRecoilValue } from "recoil";
+import { useEffect } from "react";
+import { getProfile } from "@/lib/functions";
+import { refetchCreditsAtom } from "@/atoms/flagAtom";
 
 export default function Navbar() {
   const { user } = useUser();
-  const profile = useRecoilValue(profileAtom);
+  const [profile, setProfile] = useRecoilState(profileAtom);
+  const refetchCredits = useRecoilValue(refetchCreditsAtom);
+  useEffect(() => {
+    async function fetchProfile() {
+      const profile = await getProfile();
+      console.log(profile);
+      setProfile(profile)
+    }      
+    if(user) fetchProfile();
+  },[setProfile, user, refetchCredits]);
   return (
     <nav className="w-full bg-white shadow-md px-6 py-2 z-20 grid grid-cols-3">
       {user ? (
