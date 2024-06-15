@@ -19,13 +19,14 @@ export const POST = withApiAuthRequiredExtended(
       if (!user) {
         return NextResponse.error();
       }
+      // Cart
       const purchasedItems = [
         {
           price: process.env.STRIPE_PRICE_ID!,
           quantity: 1,
         },
       ];
-
+      // From the Website To Stripe Account To Buy Credit
       const stripeSession = await stripe.checkout.sessions.create({
         payment_method_types: ["card"],
         line_items: purchasedItems,
