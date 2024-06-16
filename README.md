@@ -44,6 +44,11 @@ The primary target audience for this platform includes content creators who wish
 3. **Select Emotional Tone**: Choose the desired emotional tone for your blog post.
 4. **Generate Content**: Input relevant information and let the AI generate the blog content.
 5. **Manage Subscription**: Use Stripe to handle your subscription and billing information.
+
+## Video Explanation
+[![Watch the video](https://i.ibb.co/X44Cd27/roadmap.png)](https://www.youtube.com/watch?v=3Lk3NBXSrHA)
+
+
 ## Team Members
 Anish Kumar - CS028
 
