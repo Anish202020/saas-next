@@ -2,6 +2,8 @@
 import Image from "next/image";
 import React from "react";
 import { withPageAuthRequired } from "@auth0/nextjs-auth0/client";
+import { IoLogoGithub } from "react-icons/io";
+import Link from "next/link";
 
 export default withPageAuthRequired(function Page() {
   return (
@@ -16,6 +18,15 @@ export default withPageAuthRequired(function Page() {
               We have collaborate, support, and achieve greatness in our
               project!
             </p>
+            <div className="flex justify-center">
+              <Link
+                href={"https://github.com/Anish202020/saas-next/"}
+                target="_blank"
+                className="bg-blue-600 hover:bg-blue-500 transition-all  flex gap-1 justify-center text-white px-4 py-2 rounded-md font-bold text-xl"
+              >
+                <IoLogoGithub className="mt-0.5 text-2xl" /> Github - Raw Code
+              </Link>
+            </div>
           </div>
           <div className="flex flex-wrap -m-2">
             <div className="p-2 lg:w-1/3  md:w-1/2 w-full">

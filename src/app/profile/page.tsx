@@ -41,7 +41,7 @@ export default withPageAuthRequired(function Page() {
           You have {profile.credits} credits.
         </h2>
         <button
-          className="bg-blue-600 flex gap-1 justify-center text-white px-4 py-2 rounded-md font-bold text-xl"
+          className="bg-blue-600 flex gap-1 hover:bg-blue-500 transition-all justify-center text-white px-4 py-2 rounded-md font-bold text-xl"
           onClick={handleAddCredits}
         >
           <MdOutlineCreditScore className="mt-1.5" /> Buy more credits

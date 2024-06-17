@@ -10,7 +10,7 @@ import { useRecoilState } from "recoil";
 export default withPageAuthRequired(function Page() {
 
   return (
-    <section className="w-full flex flex-col items-center">
+    <section className="w-full picture flex flex-col items-center">
       <section className="w-[95%] max-w-4xl flex flex-col items-center gap-4">
         <h1 className="text-4xl flex flex-col justify-center  font-bold text-center mt-4 text-blue-600">
           Thank you for your purchase!
