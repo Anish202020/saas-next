@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { FaCopy } from "react-icons/fa";
-import { TiDocumentDelete } from "react-icons/ti";
 import { MdDeleteForever } from "react-icons/md";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
