@@ -2,7 +2,8 @@
 import Link from "next/link";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import Image from "next/image";
-import { FaPenFancy } from "react-icons/fa";
+import { FaPenFancy, FaHandshake } from "react-icons/fa";
+// import { FaArrowsLeftRight } from "react-icons/fa6";
 
 export default function Home() {
   const { user, error, isLoading } = useUser();
@@ -10,11 +11,28 @@ export default function Home() {
     <section className="w-full flex flex-col">
       {user ? (
         <div className="flex flex-col items-center picture justify-center gap-4">
+          <div className="flex gap-4 justify-center">
+            <Image
+              className="rounded-xl shadow-2xl"
+              src={user?.picture || ""}
+              alt={user?.name || ""}
+              width={80}
+              height={80}
+            />
+            <FaHandshake className="text-4xl mt-6 rounded-xl shadow-2xl" />
+            <Image
+              className="rounded-xl shadow-2xl"
+              src="https://i.ibb.co/QfMqMr3/a.png"
+              alt="Logo"
+              width={80}
+              height={80}
+            />
+          </div>
           <h1 className="mt-4 text-4xl font-bold text-center text-blue-600">
-          Hi, {user?.name || user?.nickname ||  "dear user"}!
+            Hi, {user?.name || user?.nickname || "dear user"}!
           </h1>
           <h2 className="text-xl max-w-lg text-center text-gray-600">
-          Welcome to AI-Bloggy, where you can easily create full blog posts
+            Welcome to AI-Bloggy, where you can easily create full blog posts
             with just one click!
           </h2>
           <Link
@@ -27,11 +45,10 @@ export default function Home() {
         </div>
       ) : (
         <div className="flex flex-col items-center picture  justify-center gap-4">
-          
-          <Link 
+          <Link
             href={"/"}
             className="flex mt-3 text-2xl font-bold text-center text-blue-600 flex-row justify-center  items-center gap-1"
-          > 
+          >
             Where Technology meets Creator
             <FaPenFancy className="text-xl mt-0.5" />
           </Link>
@@ -45,7 +62,7 @@ export default function Home() {
           />
 
           <h2 className="text-xl max-w-lg text-center text-gray-600">
-          Discover our upcoming AI-generated blog filled with inspiring
+            Discover our upcoming AI-generated blog filled with inspiring
             content.
           </h2>
           <iframe
