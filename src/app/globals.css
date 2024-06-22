@@ -9,7 +9,7 @@
 }
 input:required, textarea:required , select:required {
   border: 2px solid #ff3508;
-  background-color: #fff3e0;
+  background-color: #ffffff;
   outline: none;
   transition: border-color 0.3s, background-color 0.3s;
 }
