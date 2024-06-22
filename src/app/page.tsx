@@ -50,7 +50,6 @@ export default function Home() {
             className="flex mt-3 text-2xl font-bold text-center text-blue-600 flex-row justify-center  items-center gap-1"
           >
             Where Technology meets Creator
-            <FaPenFancy className="text-xl mt-0.5" />
           </Link>
 
           <Image
@@ -65,8 +64,10 @@ export default function Home() {
             Discover our upcoming AI-generated blog filled with inspiring
             content.
           </h2>
+          <div className="sm:w-2/3 lg:w-1/2   h-96 mb-4 lg:mb-0 rounded-lg overflow-hidden">
+
           <iframe
-            className="rounded-lg h-80 lg:w-2/6 md:w-3/6  w-3/6 mb-10 object-cover object-center "
+            className="rounded-lg h-full w-full mb-1 object-cover object-center "
             // width={500}
             // height={350}
             src="https://www.youtube.com/embed/3Lk3NBXSrHA?si=ijexu93638VUfXsP"
@@ -75,10 +76,11 @@ export default function Home() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
-          ></iframe>
+            ></iframe>
+            </div>
           <a
             href="/api/auth/login"
-            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500 transition-all font-bold
+            className="bg-blue-600 text-white px-4 py-2 mb-2 rounded-md hover:bg-blue-500 transition-all font-bold
                   cursor-pointer"
           >
             Login to get started

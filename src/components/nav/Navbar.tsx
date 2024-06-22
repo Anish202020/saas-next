@@ -47,7 +47,7 @@ export default function Navbar() {
         href={"/"}
         className="flex flex-row justify-center font-medium text-xl items-center gap-1"
       >
-        {user ? <div>Welcome</div> : <div>AI-Bloggy</div>}
+        {user ? <div>Welcome</div> : <div>AIBloggy</div>}
       </Link>
 
       {user ? (
