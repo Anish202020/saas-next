@@ -1,11 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.picture{
-    background-image: url("https://paintingvalley.com/drawings/artificial-intelligence-drawing-26.png");
-    height: 90vh;
-    background-repeat: no-repeat;
-    background-size: contain;
+.picture {
+  background-image: url("https://paintingvalley.com/drawings/artificial-intelligence-drawing-26.png");
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+input:required, textarea:required , select:required {
+  border: 2px solid #ff3508;
+  background-color: #fff3e0;
+  outline: none;
+  transition: border-color 0.3s, background-color 0.3s;
+}
 
-    
+/* Style for input fields when they are focused */
+input:required:focus , textarea:required:focus , select:required:focus {
+  border-color: #0066ff; 
+  background-color: #e1f5fe; 
+  box-shadow: 0 0 5px rgba(100, 195, 223, 0.5); 
+}
+
+/* Style for input fields when they are valid */
+input:required:valid , textarea:required:valid , select:required:valid {
+  border-color: #4caf50; /* Green border when input is valid */
+  background-color: #e8f5e9; /* Light green background when valid */
 }

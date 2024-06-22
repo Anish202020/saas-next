@@ -76,7 +76,9 @@ export const POST = withApiAuthRequiredExtended(
       });
 
       const postResponse = _generatePost.choices[0]?.message?.content;
-
+      console.log(postResponse)
+      postResponse?.replace('---','')
+      console.log(postResponse)
       const _paragraphs = postResponse?.split("\n\n");
 
       

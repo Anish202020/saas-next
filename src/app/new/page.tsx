@@ -3,11 +3,12 @@ import { withPageAuthRequired } from "@auth0/nextjs-auth0/client";
 import Link from "next/link";
 import { useState } from "react";
 import { tones } from "@/data/tones";
-import { generatePost } from "@/lib/functions";
+import { generatePost, getProfile } from "@/lib/functions";
 import { refetchCreditsAtom } from "@/atoms/flagAtom";
 import {FaSpinner,FaRegTired} from "react-icons/fa"
 import { useRecoilState } from "recoil";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default withPageAuthRequired(function Page() {
   const [post, setPost] = useState<Post | null>(null);
@@ -31,6 +32,20 @@ export default withPageAuthRequired(function Page() {
     setSuccess(false);
     setIsWaitingForResponse(true);
     //send the request
+    const profile = await getProfile();
+    if(profile.credits===0){
+      toast.error("No Token, Buy Them!", {
+        position: "bottom-left",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        // transition: Bounce,
+      });
+    }
     const res = await generatePost(postPrompt);    
     setRefetchCredits((prev) => !prev);
     await res
@@ -63,13 +78,14 @@ export default withPageAuthRequired(function Page() {
               htmlFor="title"
               className="text-gray-600 text-sm font-semibold"
             >
-              Title (optional)
+              Title <sup>*Required</sup>
             </label>
             <input
               className="w-full border border-gray-200 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
               type="text"
               name="title"
               id="title"
+              required
               placeholder="Enter a title (e.g. 'How to make a blog post')"
               value={postPrompt.title}
               onChange={(e) =>
@@ -83,11 +99,12 @@ export default withPageAuthRequired(function Page() {
               htmlFor="description"
               className="text-gray-600 text-sm font-semibold"
             >
-              Description
+              Description <sup>*Required</sup>
             </label>
             <textarea
               name="description"
               id="description"
+              required
               placeholder="Enter a description (e.g. 'This is a blog post about how to write proper blog posts that are easy to read and understand.')"
               value={postPrompt.description}
               onChange={(e) =>
@@ -102,12 +119,13 @@ export default withPageAuthRequired(function Page() {
               htmlFor="keywords"
               className="text-gray-600 text-sm font-semibold"
             >
-              Keywords
+              Keywords <sup>*Required</sup>
             </label>
             <input
               type="text"
               name="keywords"
               id="keywords"
+              required
               placeholder="Enter keywords, separated by commas (e.g. 'blog, post, writing')"
               value={postPrompt.keywords}
               onChange={(e) =>
@@ -122,11 +140,12 @@ export default withPageAuthRequired(function Page() {
               htmlFor="tone"
               className="text-gray-600 text-sm font-semibold"
             >
-              Tone
+              Tone <sup>*Required</sup>
             </label>
             <select
               name="tone"
               id="tone"
+              required
               value={postPrompt.tone}
               onChange={(e) =>
                 setPostPrompt({ ...postPrompt, tone: e.target.value })
@@ -180,6 +199,19 @@ export default withPageAuthRequired(function Page() {
             )}
           </div>
         )}
+        <ToastContainer
+          position="bottom-left"
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+          // transition: Bounce,
+        />
       </section>
     </section>
   );
