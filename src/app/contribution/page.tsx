@@ -22,9 +22,9 @@ export default withPageAuthRequired(function Page() {
               <Link
                 href={"https://github.com/Anish202020/saas-next/"}
                 target="_blank"
-                className="bg-blue-600 hover:bg-blue-500 transition-all  flex gap-1 justify-center text-white px-4 py-2 rounded-md font-bold text-xl"
+                className="bg-blue-600 hover:bg-blue-500 transition-all  flex gap-1 justify-center text-white px-4 py-2 rounded-md font-bold "
               >
-                <IoLogoGithub className="mt-0.5 text-2xl" /> Github - Raw Code
+                <IoLogoGithub className=" text-2xl" /> Github - Raw Code
               </Link>
             </div>
           </div>

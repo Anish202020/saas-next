@@ -162,7 +162,7 @@ export default withPageAuthRequired(function Page() {
 
           <button
             type="submit"
-            className="bg-blue-600 w-fit text-white px-4 py-2 rounded-md mt-4 hover:bg-blue-500 transition-all
+            className="bg-blue-600 w-fit text-white px-4 py-2 rounded-md mt-4 font-bold hover:bg-blue-500 transition-all
                 cursor-pointer"
           >
             Submit

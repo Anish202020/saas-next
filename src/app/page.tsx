@@ -38,7 +38,7 @@ export default function Home() {
           <Link
             href="/new"
             className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500 transition-all
-              cursor-pointer"
+              cursor-pointer font-bold"
           >
             Get Started
           </Link>
@@ -78,7 +78,7 @@ export default function Home() {
           ></iframe>
           <a
             href="/api/auth/login"
-            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500 transition-all
+            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500 transition-all font-bold
                   cursor-pointer"
           >
             Login to get started

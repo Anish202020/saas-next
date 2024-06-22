@@ -8,17 +8,27 @@ import Link from "next/link";
 import { useRecoilState } from "recoil";
 
 export default withPageAuthRequired(function Page() {
-
   return (
     <section className="w-full picture flex flex-col items-center">
       <section className="w-[95%] max-w-4xl flex flex-col items-center gap-4">
         <h1 className="text-4xl flex flex-col justify-center  font-bold text-center mt-4 text-blue-600">
           Thank you for your purchase!
-            <Image width={500} alt="" height={500} priority src="https://i.ibb.co/q9ntfDD/success-removebg-preview.png"/>
-            
+          <Image
+            width={500}
+            alt=""
+            height={500}
+            priority
+            src="https://i.ibb.co/q9ntfDD/success-removebg-preview.png"
+          />
         </h1>
+        <Link
+          href="/new"
+          className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500 transition-all
+              cursor-pointer font-bold"
+        >
+          Get Started
+        </Link>
       </section>
     </section>
   );
 });
-
