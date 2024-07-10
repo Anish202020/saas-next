@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import Image from "next/image";
 import { FaPenFancy, FaHandshake } from "react-icons/fa";
-// import { FaArrowsLeftRight } from "react-icons/fa6";
+
 
 export default function Home() {
   const { user, error, isLoading } = useUser();
@@ -34,6 +34,10 @@ export default function Home() {
           <h2 className="text-xl max-w-lg text-center text-gray-600">
             Welcome to AI-Bloggy, where you can easily create full blog posts
             with just one click!
+            <div className="flex justify-center mt-1">
+
+            <Image className="rounded-xl shadow-2xl" src="https://i.ibb.co/89c6rJc/free-credits.png" alt="free-credits" width={250} height={250}/>
+            </div>
           </h2>
           <Link
             href="/new"

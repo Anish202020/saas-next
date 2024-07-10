@@ -20,6 +20,7 @@ export default withPageAuthRequired(function Page() {
   const [postPrompt, setPostPrompt] = useState<PostPrompt>({
     title: "",
     description: "",
+    domain:"",
     keywords: "",
     tone: "",
   });
@@ -111,6 +112,27 @@ export default withPageAuthRequired(function Page() {
                 setPostPrompt({ ...postPrompt, description: e.target.value })
               }
               className="w-full border border-gray-200 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
+            />
+          </div>
+              {/* Domain */}
+          <div className="w-full flex flex-col gap-2">
+            <label
+              htmlFor="domain"
+              className="text-gray-600 text-sm font-semibold"
+            >
+              Domain <sup>*Required</sup>
+            </label>
+            <input
+              className="w-full border border-gray-200 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              type="text"
+              name="domain"
+              id="domain"
+              required
+              placeholder="Enter a Domain (e.g. 'For Police or Doctor')"
+              value={postPrompt.domain}
+              onChange={(e) =>
+                setPostPrompt({ ...postPrompt, domain: e.target.value })
+              }
             />
           </div>
 

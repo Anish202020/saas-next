@@ -31,7 +31,7 @@ export const POST = withApiAuthRequiredExtended(
 
       const body = await request.json();
 
-      const { description, keywords, tone, title } = body as PostPrompt;
+      const { description, keywords, tone, title ,domain} = body as PostPrompt;
 
       const openai = new OpenAI({
         apiKey: process.env.OPENAI_API_KEY,
@@ -48,7 +48,7 @@ export const POST = withApiAuthRequiredExtended(
           },
           {
             role: "user",
-            content: `Write me a title for a blog post about ${description}. The keywords for the post are as follows: ${keywords}. The tone of the post should be ${tone}. The title should be SEO friendly and no longer than 15 words. Write only one title. ${
+            content: `Write me a title for a blog post about ${description}. The keywords for the post are as follows: ${keywords}.For the Domain ${domain}. The tone of the post should be ${tone}. The title should be SEO friendly and no longer than 15 words. Write only one title. ${
               title.length > 0
                 ? `Take that title into consideration: ${title}.`
                 : ""
@@ -69,7 +69,7 @@ export const POST = withApiAuthRequiredExtended(
           },
           {
             role: "user",
-            content: `Write me a long and interesting blog post about ${description}. The title of the article is as follows: ${titleResponse}. These are the keywords for the post: ${keywords}. The blog post should be long and SEO friendly. The tone of the post should be ${tone}. Write it as well as you can. Do not include the title in the post, just start writing the post. Divide the post into paragraphs and write at least 3 paragraphs. Distinguish the paragraphs with a line break.`,
+            content: `Write me a long and interesting blog post about ${description}. The title of the article is as follows: ${titleResponse}. These are the keywords for the post: ${keywords}. For the Domain ${domain} . The blog post should be long around 400 words and SEO friendly. The tone of the post should be ${tone}. Write it as well as you can. Do not include the title in the post, just start writing the post. Divide the post into paragraphs and write at least 3 paragraphs. Distinguish the paragraphs with a line break.`,
           },
         ],
         temperature: 0.2,
