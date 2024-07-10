@@ -20,11 +20,11 @@ export const GET = withApiAuthRequiredExtended(
       if(data.length === 0){
         await db.collection("profiles").insertOne({
           uid: user.sub,
-          credits: 0,
+          credits: 5,
         });
         profile = {
           uid: user.sub,
-          credits: 0,
+          credits: 5,
         }
       }
       else{
