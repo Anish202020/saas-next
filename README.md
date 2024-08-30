@@ -1,12 +1,18 @@
 # AI-BLOGGY SaaS AI-Generated Blog for Creators Documentation - Working
-<img src="https://i.ibb.co/QfMqMr3/a.png" width=100px height=100px>
-
+[![3.png](https://i.postimg.cc/Z5tC9prz/3.png)](https://postimg.cc/7f9xdCsK)
 ## Overview
+<img src="https://i.ibb.co/QfMqMr3/a.png" width=100px height=100px>
 The SaaS AI-Generated Blog for Creators is a platform designed to help content creators generate blog content in various emotional tones. This documentation provides an overview of the platform's features, technologies, and usage instructions.
 
 
 ## AI-BLOGGY Architecture in Flow Diagram with Video
-[![Watch the video](https://i.ibb.co/X44Cd27/roadmap.png)](https://www.youtube.com/watch?v=3Lk3NBXSrHA)
+<details>
+  <summary>Click to See The DataFlow Diagram</summary>
+  
+  [![Watch the video](https://i.ibb.co/X44Cd27/roadmap.png)](https://www.youtube.com/watch?v=3Lk3NBXSrHA)
+
+  The Above is the Dataflow Diagram of Ease Expense
+</details>
 
 ## Features
 - **Emotion-Based Content Generation**: Generate blog posts in different emotional tones such as Sad, Happy, Angry, Neutral, and Professional.
