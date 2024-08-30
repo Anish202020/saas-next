@@ -1,5 +1,6 @@
 # AI-BLOGGY SaaS AI-Generated Blog for Creators Documentation - Working
-[![3.png](https://i.postimg.cc/Z5tC9prz/3.png)](https://postimg.cc/7f9xdCsK)
+<img src='https://i.postimg.cc/Z5tC9prz/3.png' border='0' alt='3'  height="350"/>
+
 ## Overview
 <img src="https://i.ibb.co/QfMqMr3/a.png" width=100px height=100px>
 The SaaS AI-Generated Blog for Creators is a platform designed to help content creators generate blog content in various emotional tones. This documentation provides an overview of the platform's features, technologies, and usage instructions.
