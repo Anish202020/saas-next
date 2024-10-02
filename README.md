@@ -12,7 +12,7 @@ The SaaS AI-Generated Blog for Creators is a platform designed to help content c
   
   [![Watch the video](https://i.ibb.co/X44Cd27/roadmap.png)](https://www.youtube.com/watch?v=3Lk3NBXSrHA)
 
-  The Above is the Dataflow Diagram of Ease Expense
+  The Above is the Dataflow Diagram of AI Bloggy
 </details>
 
 ## Features
