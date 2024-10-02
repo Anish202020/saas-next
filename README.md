@@ -1,5 +1,5 @@
 # AI-BLOGGY SaaS AI-Generated Blog for Creators Documentation - Working
-<img src='https://i.postimg.cc/Z5tC9prz/3.png' border='0' alt='3'  height="350"/>
+<img src='https://i.pinimg.com/originals/4c/de/04/4cde040d605bc7d872a6c1f6995e7ead.jpg' border='0' alt='3'  height="350"/>
 
 ## Overview
 <img src="https://i.ibb.co/QfMqMr3/a.png" width=100px height=100px>
