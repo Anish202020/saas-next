@@ -1,5 +1,5 @@
 # AI-BLOGGY SaaS AI-Generated Blog for Creators Documentation - Working
-<img src='https://github.com/Anish202020/Web-Development-Data/blob/main/Banner/Banner-1/4.png' border='0' alt='3'  height="350"/>
+<img src='https://github.com/Anish202020/Web-Development-Data/blob/main/Banner/Banner-1/4.png' border='0' alt='3' />
 
 ## Overview
 <img src="https://i.ibb.co/QfMqMr3/a.png" width=100px height=100px>
