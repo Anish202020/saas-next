@@ -1,5 +1,5 @@
 # AI-BLOGGY SaaS AI-Generated Blog for Creators Documentation - Working
-<img src='https://github.com/Anish202020/Web-Development-Data/blob/main/Banner/Banner-1/4.png' border='0' alt='3' />
+[![Watch the video](https://github.com/Anish202020/Web-Development-Data/blob/main/Banner/Banner-1/4.png)](https://www.youtube.com/watch?v=3Lk3NBXSrHA)
 
 ## Overview
 <img src="https://i.ibb.co/QfMqMr3/a.png" width=100px height=100px>
@@ -10,8 +10,9 @@ The SaaS AI-Generated Blog for Creators is a platform designed to help content c
 <details>
   <summary>Click to See The DataFlow Diagram</summary>
   
-  [![Watch the video](https://i.ibb.co/X44Cd27/roadmap.png)](https://www.youtube.com/watch?v=3Lk3NBXSrHA)
-
+  
+  <img src='https://github.com/Anish202020/Web-Development-Data/blob/main/Dataflow/ai-bloggy-saas.png' border='0' alt='3' />
+  
   The Above is the Dataflow Diagram of AI Bloggy
 </details>
 
