@@ -6,7 +6,7 @@
 The SaaS AI-Generated Blog for Creators is a platform designed to help content creators generate blog content in various emotional tones. This documentation provides an overview of the platform's features, technologies, and usage instructions.
 
 
-## AI-BLOGGY Architecture in Flow Diagram with Video
+## AI-BLOGGY Architecture in Flow Diagram
 <details>
   <summary>Click to See The DataFlow Diagram</summary>
   
