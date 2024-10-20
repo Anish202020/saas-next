@@ -1,5 +1,5 @@
 # AI-BLOGGY SaaS AI-Generated Blog for Creators Documentation - Working
-[![Watch the video](https://github.com/Anish202020/Web-Development-Data/blob/main/Banner/Banner-1/4.png)](https://www.youtube.com/watch?v=3Lk3NBXSrHA)
+[![Watch the video](https://github.com/Anish202020/Web-Development-Data/blob/main/Banner/Banner-1/Web%20Development/4.png)](https://www.youtube.com/watch?v=3Lk3NBXSrHA)
 
 ## Overview
 <img src="https://i.ibb.co/QfMqMr3/a.png" width=100px height=100px>
