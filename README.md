@@ -1,6 +1,14 @@
 # AI-BLOGGY SaaS AI-Generated Blog for Creators Documentation - Working
 [![Watch the video](https://github.com/Anish202020/Web-Development-Data/blob/main/Banner/Banner-1/Web%20Development/4.png)](https://www.youtube.com/watch?v=3Lk3NBXSrHA)
 
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![ChatGPT](https://img.shields.io/badge/ChatGPT-412991?style=for-the-badge&logo=openai&logoColor=white)
+![Auth0](https://img.shields.io/badge/Auth0-EB5424?style=for-the-badge&logo=auth0&logoColor=white)
+
+
 ## Overview
 <img src="https://i.ibb.co/QfMqMr3/a.png" width=100px height=100px>
 The SaaS AI-Generated Blog for Creators is a platform designed to help content creators generate blog content in various emotional tones. This documentation provides an overview of the platform's features, technologies, and usage instructions.
